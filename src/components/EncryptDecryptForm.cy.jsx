@@ -21,13 +21,13 @@ describe('<EncryptDecryptForm />', () => {
     })
 
     it('should be able to encrypt a text and display the result', () => {
-        cy.get('textarea[placeholder="Enter any text to be Encrypted"]').type('Text')
+        cy.get('textarea[placeholder="Enter any text to be Encrypted"]').type('test text')
         cy.get('.encrypt-button').click();
         cy.get('textarea[placeholder="Encrypted  text will appear here"]').should('not.be.empty');
     })
 
     it('should be able to decrypt a text and display the result', () => {
-        cy.get('textarea[placeholder="Enter any text to be Decrypted"]').type('y6nYn+cJiVBv+VfINCHs66i6ADw6qeqhdGIGZiSiVao=')
+        cy.get('textarea[placeholder="Enter any text to be Decrypted"]').type('kvjk kvok')
         cy.get('.decrypt-button').click();
         cy.get('textarea[placeholder="Decrypted  text will appear here"]').should('not.be.empty');
     })
